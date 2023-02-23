@@ -109,8 +109,8 @@
 
 .cube {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 230px;
+  height: 230px;
   transform-style: preserve-3d;
   transform: rotateX(-30deg);
   animation: animates 4s linear infinite;
@@ -140,31 +140,38 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, #141618, #ff3465, #ff346394);
-  transform: rotateY(calc(90deg * var(--i))) translateZ(100px);
+  background: linear-gradient(180deg, #141618, #ff3465, #ff3463);
+  transform: rotateY(calc(90deg * var(--i))) translateZ(114px);
 }
 .top {
   position: absolute;
   top: 0;
   left: 0;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   background: linear-gradient(180deg, #141618cd, #141618cd);
-  transform: rotateX(90deg) translateZ(100px);
+  transform: rotateX(90deg) translateZ(114px);
 }
 .top::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 200px;
-  height: 200px;
+  width: 230px;
+  height: 230px;
   background: #ff3465;
-  transform: translateZ(-280px);
+  transform: translateZ(-300px);
   filter: blur(20px);
   box-shadow: 0 0 120px rgba(136, 19, 70, 0.2),
     0 0 200px rgba(101, 10, 30, 0.4),
     0 0 200px rgba(103, 16, 54, 0.6),
     0 0 400px rgba(135, 17, 70, 0.8),
     0 0 500px rgb(255, 0, 102);
+}
+
+@media (max-width: 500px) {
+  .banner::before {
+    width: 100%;
+    height: 140%;
+  }
 }

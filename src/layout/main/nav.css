@@ -18,7 +18,7 @@ body{
 }
 ul.nav-links {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
@@ -47,7 +47,7 @@ ul.nav-links li a {
 .nav-item-wrapper:after {
   content: "";
   position: absolute;
-  top: 120px;
+  top: 100px;
   left: -10%;
   width: 120%;
   height: 100%;
@@ -75,7 +75,7 @@ ul.nav-links li a {
 
 @media (max-width: 900px) {
   ul.nav-links li a {
-    font-size: 5em;
+    font-size: 2em;
   }
 
   .location {

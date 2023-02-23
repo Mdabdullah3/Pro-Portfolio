@@ -16,8 +16,8 @@ const Banner = () => {
         '--i': '3'
     }
     return (
-        <div className="flex w-9/12 mx-auto justify-between items-center">
-            <div className='md:mt-48 mt-10'>
+        <div className="flex w-10/12 mx-auto flex-wrap justify-between items-center">
+            <div className='md:mt-48 mt-20 mx-auto'>
                 <h1 className='title hidden md:block'>Hello</h1>
                 <h2 className='text-white text-6xl'>I' m</h2>
                 <h3 className='text-white text-7xl mt-4 border-style'>Mohamed <span className='font-bold light-effect'>Abdullah</span></h3>
@@ -28,8 +28,8 @@ const Banner = () => {
                     <button className='download mt-7 mr-10 mb-3 font-mono uppercase'><Link to="/donars">Download CV</Link></button>
                 </div>
             </div>
-            <div>
-                <div className='cube mt-36 mr-10'>
+            <div className='mx-auto'>
+                <div className='cube mt-36 md:mr-20'>
                     <div class="top"></div>
                     <div>
                         <span style={mystyle0}></span>

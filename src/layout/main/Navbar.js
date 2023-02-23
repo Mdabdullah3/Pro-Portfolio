@@ -9,11 +9,13 @@ const Nav = () => {
     const [navOpen, setNavOpen] = useState(false);
 
     return (
-        <div className="">
-            <div className="w-10/12 mx-auto flex justify-between mt-10">
-                <div className="text-xl font-bold font-mono">Abdullah 2.0</div>
-                <div className="menu-toggle " onClick={() => setNavOpen(!navOpen)}>
-                    <div className=""> {!navOpen ? <span className="text-3xl text-gray-800"> < TiThMenuOutline /> </span> : <span className="text-2xl font-bold text-white">< ImCross /></span>} </div>
+        <div className="relative">
+            <div className="w-9/12 mx-auto flex justify-between pt-10">
+                <div className="text-xl font-bold font-mono text-white">Abdullah 2.0</div>
+                <div className="relative">
+                    <div className="menu-toggle " onClick={() => setNavOpen(!navOpen)}>
+                        <div className=""> {!navOpen ? <span className="text-3xl text-white"> < TiThMenuOutline /> </span> : <span className="text-2xl  font-bold text-white">< ImCross /></span>} </div>
+                    </div>
                 </div>
             </div>
 
@@ -25,6 +27,14 @@ const Nav = () => {
                 }}
             >
                 <ul className="nav-links">
+                    <li className="">
+                        <Link to="/"
+                            onClick={() => setNavOpen(!navOpen)}
+                            style={{
+                                top: navOpen ? "0" : "120px",
+                                transitionDelay: navOpen ? "0.8s" : "0s",
+                            }}>{navOpen ? <span className="text-2xl  font-bold text-white">< ImCross /></span> : ''}</Link>
+                    </li>
                     <li className="nav-item">
                         <Link
                             to="/"
@@ -119,7 +129,7 @@ const Nav = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

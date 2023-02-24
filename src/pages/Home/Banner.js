@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "./Style.css"
+import ReactTypingEffect from 'react-typing-effect';
 const Banner = () => {
 
     let mystyle1 = {
@@ -15,21 +16,43 @@ const Banner = () => {
     let mystyle3 = {
         '--i': '3'
     }
+
+
+
     return (
         <div className="flex w-10/12 mx-auto flex-wrap justify-between items-center">
-            <div className='md:mt-48 mt-20 mx-auto'>
+
+            <div className='md:mt-48 mt-20 md:mx-0 mx-auto'>
                 <h1 className='title hidden md:block'>Hello</h1>
                 <h2 className='text-white text-6xl'>I' m</h2>
                 <h3 className='text-white text-7xl mt-4 border-style'>Mohamed <span className='font-bold light-effect'>Abdullah</span></h3>
                 <div className="border"> </div>
-                <p className='text-xl text-white tracking-[2px] mt-4 w-9/12 capitalize'>professional frontend and backend developer with 1 year experience</p>
+                <p className='text-xl text-white tracking-[2px] mt-4 w-9/12 capitalize'>professional {" "}
+                    <ReactTypingEffect
+                        text={["frontend and backend developer", "Web Programmer"]}
+                        cursorRenderer={cursor => <h1 className='text-[#ff3465] text-xl font-bold'>{cursor}</h1>}
+                        displayTextRenderer={(text, i) => {
+                            return (
+                                <h1 className='text-xl'>
+                                    {text.split('').map((char, i) => {
+                                        const key = `${i}`;
+                                        return (
+                                            <span className='text-white '
+                                                key={key}
+                                            >{char}</span>
+                                        );
+                                    })}
+                                </h1>
+                            );
+                        }}
+                    /> with 1 year experience</p>
                 <div className='banner before:bg-gradient-to-b from-[#792037] via-[#130203da] to-[#141618]'></div>
                 <div>
                     <button className='download mt-7 mr-10 mb-3 font-mono uppercase'><Link to="/donars">Download CV</Link></button>
                 </div>
             </div>
-            <div className='mx-auto'>
-                <div className='cube mt-36 md:mr-20'>
+            <div className='mx-auto md:mx-0 md:mr-14 mr-0'>
+                <div className='cube mt-32'>
                     <div class="top"></div>
                     <div>
                         <span style={mystyle0}></span>

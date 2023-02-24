@@ -50,8 +50,8 @@
 }
 
 .light-effect {
-  color: #0e3742;
-  -webkit-box-reflect: below 1px linear-gradient(#0004);
+  color: #ffff;
+  -webkit-box-reflect: below 1px linear-gradient(#fff);
   line-height: 0.7em;
   outline: none;
   animation: animate 5s linear infinite;
@@ -187,29 +187,149 @@
 }
 
 /* My Skills Section  */
-.border-anime {
-  width: 128px;
-  border: 3px solid #ff3465;
-  position: absolute;
-  display: inline-block;
-  border-color: #ff3465;
-  z-index: -1;
-  border-radius: 10px;
-  left: 46%;
-}
 .skills:hover {
   transform: scale(1.2);
   transition: all 0.3s ease 0;
   transition: all 0.3s ease 0s;
 }
-.skill{
+.skill-text {
   position: absolute;
-  top: -60%;
-  left: 29%;
+  left: 30%;
+  top: -20%;
   font-size: 18rem;
   font-family: "Rosseta";
   font-weight: 700;
   color: #79203842;
   overflow: hidden;
   z-index: -1;
+}
+
+.skill {
+  background: #7920385e;
+  padding: 40px;
+  text-align: center;
+  z-index: 10;
+}
+.skills1,
+.skills2,
+.skills3,
+.skills4,
+.skills5,
+.skills6 {
+  flex-basis: 28.33%;
+  border-radius: 12px;
+  margin: 0 15px 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #ff34636b;
+}
+.skills1::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 140%;
+  background: linear-gradient(180deg, #ff3463, #141618, #ff3463, #141618);
+  animation: animeBorder 2s linear infinite;
+}
+.skills1::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: #792038f4;
+  border-radius: 16px;
+}
+
+.skills2::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 140%;
+  background: linear-gradient(180deg, #ff3463, #141618, #ff3463, #141618);
+  animation: animeBorder 2s linear infinite;
+}
+
+.skills2::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: #792038f4;
+  border-radius: 16px;
+}
+
+.skills3::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 140%;
+  background: linear-gradient(180deg, #ff3463, #141618, #ff3463, #141618);
+  animation: animeBorder 2s linear infinite;
+}
+
+.skills3::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: #792038f4;
+  border-radius: 16px;
+}
+
+.skills4::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 140%;
+  background: linear-gradient(180deg, #ff3463, #141618, #ff3463, #141618);
+  animation: animeBorder 2s linear infinite;
+}
+
+.skills4::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: #792038f4;
+  border-radius: 16px;
+}
+.skills5::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 140%;
+  background: linear-gradient(180deg, #ff3463, #141618, #ff3463, #141618);
+  animation: animeBorder 2s linear infinite;
+}
+
+.skills5::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: #792038f4;
+  border-radius: 16px;
+}
+.skills6::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 140%;
+  background: linear-gradient(180deg, #ff3463, #141618, #ff3463, #141618);
+  animation: animeBorder 2s linear infinite;
+}
+
+.skills6::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: #792038f4;
+  border-radius: 16px;
+}
+@keyframes animeBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

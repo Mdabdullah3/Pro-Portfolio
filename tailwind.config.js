@@ -3,9 +3,21 @@ module.exports = {
   daisyui: {
     themes: [
       {
+        night: {
+          primary: "#ff3465",
+          secondary: "#141618",
+          neutral: "#F3F4F6",
+          "base-100": "#141618",
+          info: "#111827",
+          success: "#1BBB70",
+          warning: "#F59E0B",
+          error: "#FB7185",
+        },
+      },
+      {
         light: {
-          primary: "#fb4051",
-          secondary: "#0D0D0D",
+          primary: "#ff3465",
+          secondary: "#141618",
           neutral: "#F3F4F6",
           "base-100": "#ffffff",
           info: "#ECF0F3",
@@ -14,18 +26,6 @@ module.exports = {
           error: "#FA5C5C",
         },
       },
-      {
-        night: {
-          primary: "#11DEDE",
-          secondary: "#ffff",
-          neutral: "#F3F4F6",
-          "base-100": "#0A0F1E",
-          info: "#111827",
-          success: "#1BBB70",
-          warning: "#F59E0B",
-          error: "#FB7185",
-        },
-      }
     ],
   },
   plugins: [require("daisyui")],
